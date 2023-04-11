@@ -39,20 +39,20 @@ USERS_TO_SEND='список пользователей которые произ
 ```
 
 Создать виртуальное окружение:
-'''
+```
 python3.11 -m venv venv
-'''
+```
 Активировать окружение:
-'''
+```
 . venv/bin/activate
-'''
+```
 Установить зависимости:
-'''
+```
 pip install -r requeriments.txt
-'''
+```
 
 Создать сервис:
-'''
+```
 touch /etc/systemd/system/<name>.service
 
 nano /etc/systemd/system/<name>.service
@@ -68,13 +68,13 @@ ExecStart=<путь к папке виртуального окрудения>/b
 
 [Install]
 WantedBy=multi-user.target
-'''
+```
 
 Запустить сервис
-'''
+```
 sudo systemctl start <name>.service
-'''
+```
 Добавить сервис в автозагрузку
-'''
+```
 sudo systemctl enable <name>.service
-'''
+```
